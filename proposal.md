@@ -16,9 +16,13 @@ Foodborne illnesses are a very prevalent type of illness in today's society. The
 
 ## References
 Dewey-Mattia, Daniel, et al. "Surveillance for Foodborne Disease Outbreaks—United States, 2009–2015." MMWR Surveillance Summaries 67.10 (2018): 1.
+
 Hati, Subrota, Kunal Gawai, and V. Sreeja. "Food Borne Pathogens: A Threat to Dairy Industry." Research & Reviews: Journal of Dairy Science and Technology 4.1 (2018): 28-36.
+
 Marder, Ellyn P., et al. "Preliminary Incidence and Trends of Infections with Pathogens Transmitted Commonly Through Food—Foodborne Diseases Active Surveillance Network, 10 US Sites, 2006–2017." Morbidity and Mortality Weekly Report 67.11 (2018): 324.
+
 Marsh, Zachary, et al. "Epidemiology of Foodborne Norovirus Outbreaks–United States, 2009–2015." Food Safety (2018): 2017028.
+
 Scallan, Elaine, et al. "Foodborne illness acquired in the United States—major pathogens." Emerging infectious diseases 17.1 (2011): 7.
 
-dataset mentioned can be found at: https://www.cdc.gov/fdoss/pdf/2016_FoodBorneOutbreaks_508.pdf
+Dataset mentioned can be found at: https://www.cdc.gov/fdoss/pdf/2016_FoodBorneOutbreaks_508.pdf
