@@ -1,0 +1,26 @@
+Etiology,Food Category*,No. Outbreaks,No. Illnesses,No. Hospitalizations,No. Deaths
+Scombroid toxin/histamine,Fish,12,35,0,0
+Ciguatoxin,Fish,11,33,3,0
+Salmonella,Chicken,8,307,42,1
+Campylobacter,Dairy,7,57,5,0
+Norovirus,Mollusks,6,209,3,0
+Salmonella,Pork,6,96,12,0
+Vibrio parahaemolyticus,Mollusks,6,19,2,0
+Etiology,Food Category*,No. Outbreaks,No. Illnesses,No. Hospitalizations,No. Deaths
+Bacillus cereus,Grains and beans,5,348,0,0
+Salmonella,Chicken,8,307,42,1
+Hepatitis A virus,Mollusks,1,281,71,2
+Norovirus,Mollusks,6,209,3,0
+Staphylococcus aureus enterotoxin,Pork,4,170,18,0
+Etiology,Food Category*,No. Outbreaks,No. Illnesses,No. Hospitalizations,No. Deaths
+Hepatitis A virus,Mollusks,1,281,71,2
+Hepatitis A virus,Fruits,1,137,57,0
+Salmonella,Beef,2,110,44,1
+Salmonella,Chicken,8,307,42,1
+Salmonella,Dairy,4,138,23,0
+Etiology,Food Category*,No. Outbreaks,No. Illnesses,No. Hospitalizations,No. Deaths
+Hepatitis A virus,Mollusks,1,281,71,2
+Listeria monocytogenes,Dairy,1,10,9,2
+Salmonella,Chicken,8,307,42,1
+Vibrio cholerae ,Mollusks,3,6,3,1
+Salmonella,Beef,2,110,44,1

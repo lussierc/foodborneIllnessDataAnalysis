@@ -1,0 +1,40 @@
+Etiology,Catering or banquet facility NO,Catering or banquet facility NI,Restaurant NO,Restaurant NI,Other commercial location NO,Other commercial location NI,Hospital or nursing home NO,Hospital or nursing home NI,Instituitional location NO,Instituitional location NI,Private home NO,Private home NI,Other private location  NO,Other private location  NI,Other location NO,Other location NI
+Bacterial,,,,,,,,,,,,,,,,
+Salmonella,6,255,53,794,11,363,3,11,10,507,17,310,2,51,1,2
+Clostridium perfringens,3,106,9,255,-,-,-,-,-,-,3,72,1,35,-,-
+"Escherichia coli, Shiga toxin-producing",1,10,7,46,4,60,-,-,-,-,2,14,-,-,-,-
+Campylobacter,2,20,8,85,4,37,-,-,-,-,3,7,-,-,-,-
+Bacillus cereus,1,39,2,187,-,-,-,-,2,110,1,4,-,-,-,-
+Staphylococcus aureus enterotoxin,2,157,1,4,-,-,-,-,-,-,1,12,-,-,-,-
+Vibrio parahaemolyticus,-,-,-,-,1,2,-,-,-,-,-,-,-,-,-,-
+Vibrio cholerae,-,-,2,4,1,2,-,-,-,-,-,-,-,-,-,-
+Shigella,2,21,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+Clostridium botulinum,-,-,-,-,-,-,-,-,-,-,1,2,-,-,-,-
+Listeria monocytogenes,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+"Escherichia coli, Enteroinvasive",-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+Staphylococcus spp,-,-,1,16,-,-,-,-,-,-,-,-,-,-,-,-
+"Escherichia coli, Enteroaggregative",-,-,-,-,1,10,-,-,-,-,-,-,-,-,-,-
+Brucella spp,-,-,-,-,-,-,-,-,-,-,1,3,-,-,-,-
+Vibrio other,-,-,1,2,-,-,-,-,-,-,-,-,-,-,-,-
+Other,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+Subtotal,17,608,84,1393,22,474,3,11,12,617,29,424,3,86,1,2
+Chemical and toxin,,,,,,,,,,,,,,,,
+Scombroid toxin/histamine,-,-,9,29,-,-,-,-,-,-,3,6,-,-,-,-
+Ciguatoxin,-,-,-,-,1,2,-,-,-,-,9,25,-,-,-,-
+Mycotoxins,-,-,-,-,-,-,-,-,-,-,1,7,-,-,-,-
+Other,1,64,-,-,-,-,-,-,-,-,-,-,-,-,1,2
+Subtotal,1,64,9,29,1,2,-,-,-,-,13,38,-,-,1,2
+Parasitic,,,,,,,,,,,,,,,,
+Cryptosporidium,-,-,-,-,2,9,-,-,-,-,-,-,-,-,-,-
+Trichinella,-,-,-,-,-,-,-,-,-,-,2,8,-,-,-,-
+Giardia,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+Cyclospora,-,-,1,15,-,-,-,-,-,-,-,-,-,-,-,-
+Subtotal,-,-,1,15,2,9,-,-,-,-,2,8,-,-,-,-
+Viral,,,,,,,,,,,,,,,,
+Norovirus,28,1051,85,1426,2,93,5,187,2,529,5,60,2,100,3,112
+Hepatitis A virus,-,-,2,418,-,-,-,-,-,-,1,39,-,-,-,-
+Sapovirus,-,-,1,15,-,-,-,-,-,-,-,-,-,-,-,-
+Subtotal,28,1051,88,1859,2,93,5,187,2,529,6,99,2,100,3,112
+Single etiology,46,1723,182,3296,27,578,8,198,14,114 6,51,581,5,186,6,128
+Multiple etiologies con_rmed__,-,-,2,22,-,-,-,-,-,-,2,65,-,-,-,-
+Total,46,1723,184,3318,27,578,8,198,14,1146,53,646,5,186,6,128

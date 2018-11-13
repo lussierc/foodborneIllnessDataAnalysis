@@ -1,0 +1,34 @@
+Food Category*,No. Outbreaks Total,%,No. Illnesses Total,%
+Aquatic animals,,,,
+Crustaceans,6,3,118,3
+Mollusks-,21,12,529,14
+Fish,26,14,82,2
+Other aquatic animals,2,1,8,0
+Subtotal,55,31,737,20
+Land animals,,,,
+Dairy,19,11,252,7
+Eggs,6,3,161,4
+Beef,11,6,340,9
+Pork,18,10,438,12
+Other meat,1,1,50,1
+Chicken,17,9,356,9
+Turkey,3,2,62,2
+Game,1,1,3,0
+Subtotal,76,42,1662,44
+Plants,,,,
+Oils and sugars,1,1,12,0
+Fungi,1,1,7,0
+Sprouts,5,3,104,3
+Root and other underground vegetables,3,2,118,3
+Seeded vegetables,6,3,106,3
+Herbs,1,1,96,3
+Vegetable row crops,7,4,144,4
+Fruits,10,6,347,9
+Grains and beans,8,4,383,10
+Nuts and seeds,3,2,22,1
+Subtotal,45,25,1339,35
+Other,11,6,247,6
+Food reported attributed to a single food category,180,21,3776,26
+Food reported not attributed to a single food category,143,17,2939,21
+No food reported,516,62,7544,53
+Total,839,100,14259,100

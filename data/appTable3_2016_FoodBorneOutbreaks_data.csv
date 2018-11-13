@@ -1,0 +1,40 @@
+Etiology,S1,S2,S3,S4,S5,>= 1 Factor Reported,Outbreaks with reported contributing factors,Total Outbreaks
+Bacterial,,,,,,,,
+Salmonella,14,6,1,3,4,23,48,132
+Clostridium perfringens,2,8,1,-,2,10,15,18
+"Escherichia coli, Shiga toxin-producing",2,1,-,2,4,7,12,25
+Campylobacter,4,-,-,-,-,4,10,18
+Bacillus cereus,1,2,-,-,1,4,5,6
+Staphylococcus aureus enterotoxin,1,-,-,-,1,2,4,4
+Vibrio parahaemolyticus,1,-,-,-,-,1,2,3
+Vibrio cholerae,1,-,-,-,1,2,3,4
+Shigella,-,-,-,-,-,-,1,2
+Clostridium botulinum,1,-,-,-,-,1,1,1
+Listeria monocytogenes,-,-,-,-,-,-,-,2
+"Escherichia coli, Enteroinvasive",-,-,-,-,-,-,-,-
+Staphylococcus spp,-,-,-,-,-,-,1,1
+"Escherichia coli, Enteroaggregative",-,-,-,-,-,-,-,1
+Brucella spp,-,-,-,-,1,1,1,1
+Vibrio other,-,-,-,-,-,-,1,1
+Other,-,-,-,-,-,-,-,-
+Subtotal,27,17,2,5,14,55,104,219
+Chemical and toxin,,,,,,,,
+Scombroid toxin/histamine,1,-,-,-,-,1,10,12
+Ciguatoxin,-,-,-,-,-,-,11,11
+Mycotoxins,-,-,-,-,-,-,1,1
+Other,-,-,-,-,-,-,1,2
+Subtotal,1,-,-,-,-,1,23,26
+Parasitic,,,,,,,,
+Cryptosporidium,-,-,-,-,-,-,2,2
+Trichinella,2,-,-,-,-,2,2,2
+Giardia,-,-,-,-,-,-,-,-
+Cyclospora,-,-,-,-,-,-,-,1
+Subtotal,2,-,-,-,-,2,4,5
+Viral,,,,,,,,
+Norovirus,2,1,-,2,4,7,84,145
+Hepatitis A virus,-,-,-,-,-,-,3,3
+Sapovirus,-,-,-,-,-,-,-,1
+Subtotal,2,1,-,2,4,7,87,149
+Single etiology,32,18,2,7,18,65,218,399
+Multiple etiologies con_rmed,1,-,-,-,-,1,2,4
+Total,33,18,2,7,18,66,220,403

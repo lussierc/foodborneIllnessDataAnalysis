@@ -1,0 +1,41 @@
+Etiology,C1,C2,C3,C4,C5,C6,C7,C8,C9,C10,C11,C12,C13,C14,C15,>= 1 factor reported,Outbreaks with reported contributing factors,Total outbreaks
+Bacterial,,,,,,,,,,,,,,,,,,
+Salmonella,-,-,-,-,-,-,-,-,1,-,-,-,-,-,-,1,1,3
+Clostridium perfringens,1,-,-,-,-,1,-,-,-,-,-,1,-,1,1,3,7,12
+"Escherichia coli, Shiga toxin-producing",-,-,-,-,-,-,1,-,-,-,-,-,-,-,-,1,1,2
+Campylobacter,-,-,-,-,-,1,1,-,1,-,-,-,-,-,-,3,3,7
+Bacillus cereus,1,-,-,-,-,1,-,-,2,-,-,-,-,1,1,6,9,13
+Staphylococcus aureus enterotoxin,-,-,-,-,-,-,-,-,1,1,-,-,1,-,-,3,6,10
+Vibrio parahaemolyticus,-,-,-,-,-,-,1,1,-,-,-,-,-,-,-,1,3,3
+Vibrio cholerae,-,-,-,-,-,-,1,-,-,-,-,-,-,-,-,1,1,1
+Shigella,-,-,-,-,-,-,-,-,-,-,-,-,-,1,-,1,1,1
+Clostridium botulinum,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,1,1
+Listeria monocytogenes,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+"Escherichia coli, Enteroinvasive",-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,1
+Staphylococcus spp,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+"Escherichia coli, Enteroaggregative",-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+Brucella spp,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+Vibrio other,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+Other,-,-,-,-,-,-,-,-,2,-,-,-,-,-,2,3,7,13
+Subtotal,2,-,-,-,-,3,4,1,7,1,-,1,1,3,4,23,40,67
+Chemical and toxin,,,,,,,,,,,,,,,,,,
+Scombroid toxin/histamine,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+Ciguatoxin,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+Mycotoxins,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+Other,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,1
+Subtotal,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,1
+Parasitic,,,,,,,,,,,,,,,,,,
+Cryptosporidium,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+Trichinella,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+Giardia,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,1
+Cyclospora,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+Subtotal,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,1
+Viral,,,,,,,,,,,,,,,,,,
+Norovirus,-,-,-,-,-,-,-,-,8,35,30,18,7,8,20,71,72,177
+Hepatitis A virus,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+Sapovirus,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+Subtotal,-,-,-,-,-,-,-,-,8,35,30,18,7,8,20,71,72,177
+Single etiology,2,-,-,-,-,3,4,1,15,36,30,19,8,11,24,94,112,246
+Multiple etiologies suspected,1,-,-,-,-,1,-,-,-,-,-,-,-,-,2,4,5,13
+Unknown etiology__,2,-,-,-,-,1,2,1,10,9,5,2,3,7,7,29,42,177
+Total,5,-,-,-,-,5,6,2,25,45,35,21,11,18,33,127,159,436
