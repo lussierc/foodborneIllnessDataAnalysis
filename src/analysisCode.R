@@ -3,25 +3,25 @@
 
 # --- Import Data From 2016 Foodborne Outbreaks --- #
 # - Import Regular Tables From 2016 Foodborne Outbreaks - #
-table1_2016_FoodBorneOutbreaks <- read.csv("~/cs301F2018/cs301f2018-project-starter-townies/data/table1_2016_FoodBorneOutbreaks.csv")
+table1_2016_FoodBorneOutbreaks <- read.csv("~/cs301F2018/cs301f2018-project-starter-townies/data/table1_2016_FoodBorneOutbreaks_data.csv")
 View(table1_2016_FoodBorneOutbreaks)
 
-table2a_2016_FoodBorneOutbreaks <- read.csv("~/cs301F2018/cs301f2018-project-starter-townies/data/table2_2016_FoodBorneOutbreaks.csv")
-View(table2_2016_FoodBorneOutbreaks)
+table2a_2016_FoodBorneOutbreaks <- read.csv("~/cs301F2018/cs301f2018-project-starter-townies/data/table2_2016_FoodBorneOutbreaks_data.csv")
+View(table2a_2016_FoodBorneOutbreaks)
 
-table2b_2016_FoodBorneOutbreaks <- read.csv("~/cs301F2018/cs301f2018-project-starter-townies/data/table2b_2016_FoodBorneOutbreaks.csv")
+table2b_2016_FoodBorneOutbreaks <- read.csv("~/cs301F2018/cs301f2018-project-starter-townies/data/table2b_2016_FoodBorneOutbreaks_data.csv")
 View(table2b_2016_FoodBorneOutbreaks)
 
-table3a_2016_FoodBorneOutbreaks <- read.csv("~/cs301F2018/cs301f2018-project-starter-townies/data/table3a_2016_FoodBorneOutbreaks.csv")
+table3a_2016_FoodBorneOutbreaks <- read.csv("~/cs301F2018/cs301f2018-project-starter-townies/data/table3a_2016_FoodBorneOutbreaks_data.csv")
 View(table3a_2016_FoodBorneOutbreaks)
 
-table3b_2016_FoodBorneOutbreaks <- read.csv("~/cs301F2018/cs301f2018-project-starter-townies/data/table3b_2016_FoodBorneOutbreaks.csv")
+table3b_2016_FoodBorneOutbreaks <- read.csv("~/cs301F2018/cs301f2018-project-starter-townies/data/table3b_2016_FoodBorneOutbreaks_data.csv")
 View(table3b_2016_FoodBorneOutbreaks)
 
-table3c_2016_FoodBorneOutbreaks <- read.csv("~/cs301F2018/cs301f2018-project-starter-townies/data/table3c_2016_FoodBorneOutbreaks.csv")
+table3c_2016_FoodBorneOutbreaks <- read.csv("~/cs301F2018/cs301f2018-project-starter-townies/data/table3c_2016_FoodBorneOutbreaks_data.csv")
 View(table3c_2016_FoodBorneOutbreaks)
 
-table4_2016_FoodBorneOutbreaks <- read.csv("~/cs301F2018/cs301f2018-project-starter-townies/data/table4_2016_FoodBorneOutbreaks.csv")
+table4_2016_FoodBorneOutbreaks <- read.csv("~/cs301F2018/cs301f2018-project-starter-townies/data/table4_2016_FoodBorneOutbreaks_data.csv")
 View(table4_2016_FoodBorneOutbreaks)
 
 # - Import Appendix Tables From 2016 Foodborne Outbreaks - #
