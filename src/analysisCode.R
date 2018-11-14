@@ -41,3 +41,4 @@ appTable6_2016_FoodBorneOutbreaks_data <- read.csv("~/cs301F2018/cs301f2018-proj
 
 ggplot(data = table1_2016_FoodBorneOutbreaks) + geom_point(mapping = aes(x = No..Outbreaks.CE, y = SE, color = Etiology), position = "dodge", stat = "identity") + theme(axis.text.x = element_text(angle = 90, hjust = 1, vjust=-0.01))
 
+ggplot(data = table1_2016_FoodBorneOutbreaks) + geom_bar(mapping = aes(x = Etiology, y = No..Outbreaks.CE), position = "dodge", stat = "identity") + theme(axis.text.x = element_text(angle = 90, hjust = 1, vjust=-0.01))
