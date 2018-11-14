@@ -1,8 +1,8 @@
 Etiology,No. Outbreaks CE,SE,Total,%,No. Illnesses CE,SE,Total,%,No. Hospitalizations CE,SE,Total,%
 Bacterial,,,,,,,,,,,,
-Salmonella,2,3,135,21,3047,34,3081,25,456,0,456,54
+Salmonella,132,3,135,21,3047,34,3081,25,456,0,456,54
 Clostridiumperfringens,18,12,30,5,512,244,756,6,3,5,8,1
-Escherichia coli Shiga toxin-producing (STEC),5,2,27,4,370,16,386,3,98,5,103,12
+Escherichia coli Shiga toxin-producing (STEC),25,2,27,4,370,16,386,3,98,5,103,12
 Campylobacter,18,7,25,4,152,35,187,2,17,1,18,2
 Bacillus cereus,6,13,19,3,340,301,641,5,0,0,0,0
 Staphylococcus aureus enterotoxin,4,10,14,2,173,64,237,2,17,4,21,2
@@ -36,6 +36,6 @@ Hepatitis A virus,3,0,3,0,457,0,457,4,141,0,141,17
 Sapovirus,1,0,1,0,15,0,15,0,0,0,0,0
 Subtotal,149,177,326,51,4266,2140,6406,53,185,17,202,24
 Single etiology,399,246,645,77,9123,2971,12094,85,812,35,847,97
-Multiple etiologies confirmed or suspected•À_•À_•À_3,17,2,87,377,464,3,2,2,4,0,,
-Unknown etiology•À_•À_•À_•À_•À_•À_,0,177,177,21,0,1701,1701,12,0,24,24,3
+Multiple etiologies confirmed or suspected´è_´è_´è_3,17,2,87,377,464,3,2,2,4,0,,
+Unknown etiology´è_´è_´è_´è_´è_´è_,0,177,177,21,0,1701,1701,12,0,24,24,3
 Total,403,436,839,100,9210,5049,14259,100,814,61,875,100
