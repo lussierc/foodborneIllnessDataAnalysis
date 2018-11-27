@@ -53,5 +53,8 @@ ggplot(data = table1_2016_FoodBorneOutbreaks) + geom_bar(mapping = aes(x = Etiol
 # Plots bar graph that shows the numbers of confirmed hospitalizations by etiology.
 ggplot(data = table1_2016_FoodBorneOutbreaks) + geom_bar(mapping = aes(x = Etiology, y = No..Hospitalizations.CE), position = "dodge", stat = "identity") + theme(axis.text.x = element_text(angle = 90, hjust = 1, vjust=-0.01))
 
-# Plots bar graph that shows the numbers of confirmed hospitalizations by etiology.
-ggplot(data = table1_2016_FoodBorneOutbreaks) + geom_histo(mapping = aes(x = Food.Category., y = No..Outbreaks.Total), position = "dodge", stat = "identity") + theme(axis.text.x = element_text(angle = 90, hjust = 1, vjust=-0.01))
+# Plots bar graph that shows the numbers of outbreaks by food type.
+ggplot(data = table2a_2016_FoodBorneOutbreaks) + geom_histogram(mapping = aes(x = Food.Category., y = No..Outbreaks.Total), position = "dodge", stat = "identity") + theme(axis.text.x = element_text(angle = 90, hjust = 1, vjust=-0.01))
+
+# Plots bar graph that shows the numbers of illnesses by food type.
+ggplot(data = table2a_2016_FoodBorneOutbreaks) + geom_histogram(mapping = aes(x = Food.Category., y = No..Illnesses.Total), position = "dodge", stat = "identity") + theme(axis.text.x = element_text(angle = 90, hjust = 1, vjust=-0.01))
