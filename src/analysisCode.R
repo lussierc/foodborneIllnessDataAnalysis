@@ -36,6 +36,15 @@ appTable4_2016_FoodBorneOutbreaks_data <- read.csv("~/cs301F2018/cs301f2018-proj
 appTable5_2016_FoodBorneOutbreaks_data <- read.csv("~/cs301F2018/cs301f2018-project-starter-townies/data/appTable5_2016_FoodBorneOutbreaks_data.csv", header=FALSE)
 
 appTable6_2016_FoodBorneOutbreaks_data <- read.csv("~/cs301F2018/cs301f2018-project-starter-townies/data/appTable6_2016_FoodBorneOutbreaks_data.csv", header=FALSE)
+
+
+NORS_foodborne <- read.csv("~/cs301F2018/cs301f2018-project-starter-townies/data/NORSFoodborneInfo.csv", header=TRUE)
+View(NORS_foodborne)
+
+food_production_indicator_data <- read.csv("~/cs301F2018/cs301f2018-project-starter-townies/data/API_AG.PRD.FOOD.XD_DS2_en_csv_v2_10231267.csv", header=TRUE)
+View(food_production_indicator_data)
+
+
 # --- End Data Imports --- #
 
 
