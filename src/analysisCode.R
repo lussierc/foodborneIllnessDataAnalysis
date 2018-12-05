@@ -53,7 +53,10 @@ View(food_production_indicator_data)
 # ----- PLOTTING -----:
 # BY ETIOLOGY: 
 # Plots scatterplot that compares the outbreaks by confirmed etiology and suspected etiology. 
-ggplot(data = table1_2016_FoodBorneOutbreaks) + geom_point(mapping = aes(x = No..Outbreaks.CE, y = SE, color = Etiology), position = "dodge", stat = "identity") + theme(axis.text.x = element_text(angle = 90, hjust = 1, vjust=-0.01))
+ggplot(data = table1_2016_FoodBorneOutbreaks,aes(No..Outbreaks.CE, SE)) + 
+  geom_point(aes(color = Etiology), position = "dodge", stat = "identity") + 
+  geom_smooth() +
+  theme(axis.text.x = element_text(angle = 90, hjust = 1, vjust=-0.01))
 
 # Plots bar graph that shows the numbers of confirmed outbreaks by etiology.
 ggplot(data = table1_2016_FoodBorneOutbreaks) + geom_bar(mapping = aes(x = Etiology, y = No..Outbreaks.CE), position = "dodge", stat = "identity") + theme(axis.text.x = element_text(angle = 90, hjust = 1, vjust=-0.01))
@@ -69,3 +72,13 @@ ggplot(data = table2a_2016_FoodBorneOutbreaks) + geom_histogram(mapping = aes(x 
 
 # Plots bar graph that shows the numbers of illnesses by food type.
 ggplot(data = table2a_2016_FoodBorneOutbreaks) + geom_histogram(mapping = aes(x = Food.Category., y = No..Illnesses.Total), position = "dodge", stat = "identity") + theme(axis.text.x = element_text(angle = 90, hjust = 1, vjust=-0.01))
+
+
+
+# overall ecoli over time
+# overall illness over time
+# Breakdown of places
+# Breakdown of etiology
+# Breakdowon of food category
+
+
