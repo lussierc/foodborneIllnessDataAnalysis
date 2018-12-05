@@ -3,45 +3,47 @@
 
 # Imports the needed libraries:
 # Run the below only if the library is not already installed.
+
 library(dplyr)
 library(tibble)
 library(tidyverse)
 
 # --- Import Data From 2016 Foodborne Outbreaks --- #
 # - Import Regular Tables From 2016 Foodborne Outbreaks - #
-table1_2016_FoodBorneOutbreaks <- read.csv("~/cs301F2018/cs301f2018-project-starter-townies/data/table1_2016_FoodBorneOutbreaks_data.csv")
 
-table2a_2016_FoodBorneOutbreaks <- read.csv("~/cs301F2018/cs301f2018-project-starter-townies/data/table2_2016_FoodBorneOutbreaks_data.csv")
+table1_2016_FoodBorneOutbreaks <- read.csv("../data/usedData/table1_2016_FoodBorneOutbreaks_data.csv")
+
+table2a_2016_FoodBorneOutbreaks <- read.csv("../data/usedData/table2_2016_FoodBorneOutbreaks_data.csv")
 View(table2a_2016_FoodBorneOutbreaks) # Shows the data for the object
 
-table2b_2016_FoodBorneOutbreaks <- read.csv("~/cs301F2018/cs301f2018-project-starter-townies/data/table2b_2016_FoodBorneOutbreaks_data.csv")
+table2b_2016_FoodBorneOutbreaks <- read.csv("../data/usedData/table2b_2016_FoodBorneOutbreaks_data.csv")
 
-table3a_2016_FoodBorneOutbreaks <- read.csv("~/cs301F2018/cs301f2018-project-starter-townies/data/table3a_2016_FoodBorneOutbreaks_data.csv")
+table3a_2016_FoodBorneOutbreaks <- read.csv("../data/usedData/table3a_2016_FoodBorneOutbreaks_data.csv")
 
-table3b_2016_FoodBorneOutbreaks <- read.csv("~/cs301F2018/cs301f2018-project-starter-townies/data/table3b_2016_FoodBorneOutbreaks_data.csv")
+table3b_2016_FoodBorneOutbreaks <- read.csv("../data/usedData/table3b_2016_FoodBorneOutbreaks_data.csv")
 
-table3c_2016_FoodBorneOutbreaks <- read.csv("~/cs301F2018/cs301f2018-project-starter-townies/data/table3c_2016_FoodBorneOutbreaks_data.csv")
+table3c_2016_FoodBorneOutbreaks <- read.csv("../data/usedData/table3c_2016_FoodBorneOutbreaks_data.csv")
 
-table4_2016_FoodBorneOutbreaks <- read.csv("~/cs301F2018/cs301f2018-project-starter-townies/data/table4_2016_FoodBorneOutbreaks_data.csv")
+table4_2016_FoodBorneOutbreaks <- read.csv("../data/usedData/table4_2016_FoodBorneOutbreaks_data.csv")
 
 # - Import Appendix Tables From 2016 Foodborne Outbreaks - #
-appTable1_2016_FoodBorneOutbreaks_data <- read.csv("~/cs301F2018/cs301f2018-project-starter-townies/data/appTable1_2016_FoodBorneOutbreaks_data.csv", header=FALSE)
+appTable1_2016_FoodBorneOutbreaks_data <- read.csv("../data/usedData/appTable1_2016_FoodBorneOutbreaks_data.csv", header=FALSE)
 
-appTable2_2016_FoodBorneOutbreaks_data <- read.csv("~/cs301F2018/cs301f2018-project-starter-townies/data/appTable2_2016_FoodBorneOutbreaks_data.csv", header=FALSE)
+appTable2_2016_FoodBorneOutbreaks_data <- read.csv("../data/usedData/appTable2_2016_FoodBorneOutbreaks_data.csv", header=FALSE)
 
-appTable3_2016_FoodBorneOutbreaks_data <- read.csv("~/cs301F2018/cs301f2018-project-starter-townies/data/appTable3_2016_FoodBorneOutbreaks_data.csv", header=FALSE)
+appTable3_2016_FoodBorneOutbreaks_data <- read.csv("../data/usedData/appTable3_2016_FoodBorneOutbreaks_data.csv", header=FALSE)
 
-appTable4_2016_FoodBorneOutbreaks_data <- read.csv("~/cs301F2018/cs301f2018-project-starter-townies/data/appTable4_2016_FoodBorneOutbreaks_data.csv", header=FALSE)
+appTable4_2016_FoodBorneOutbreaks_data <- read.csv("../data/usedData/appTable4_2016_FoodBorneOutbreaks_data.csv", header=FALSE)
 
-appTable5_2016_FoodBorneOutbreaks_data <- read.csv("~/cs301F2018/cs301f2018-project-starter-townies/data/appTable5_2016_FoodBorneOutbreaks_data.csv", header=FALSE)
+appTable5_2016_FoodBorneOutbreaks_data <- read.csv("../data/usedData/appTable5_2016_FoodBorneOutbreaks_data.csv", header=FALSE)
 
-appTable6_2016_FoodBorneOutbreaks_data <- read.csv("~/cs301F2018/cs301f2018-project-starter-townies/data/appTable6_2016_FoodBorneOutbreaks_data.csv", header=FALSE)
+appTable6_2016_FoodBorneOutbreaks_data <- read.csv("../data/usedData/appTable6_2016_FoodBorneOutbreaks_data.csv", header=FALSE)
 
 
-NORS_foodborne <- read.csv("~/cs301F2018/cs301f2018-project-starter-townies/data/NORSFoodborneInfo.csv", header=TRUE)
+NORS_foodborne <- read.csv("../data/usedData/NORSFoodborneInfo.csv", header=TRUE)
 View(NORS_foodborne)
 
-food_production_indicator_data <- read.csv("~/cs301F2018/cs301f2018-project-starter-townies/data/API_AG.PRD.FOOD.XD_DS2_en_csv_v2_10231267.csv", header=TRUE)
+food_production_indicator_data <- read.csv("../data/usedData/API_AG.PRD.FOOD.XD_DS2_en_csv_v2_10231267.csv", header=TRUE)
 View(food_production_indicator_data)
 
 
