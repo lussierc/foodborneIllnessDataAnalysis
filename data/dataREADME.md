@@ -1,6 +1,13 @@
 # README for Data Organization
-This README is only for describing the tables/different files within the data folder, not the project as a whole.
-## 2016 Foodborne Outbreaks Data
+This README is only for describing the tables/different files within the data folder, not the project as a whole. Data used for the project can be found in the `usedData` folder.
+
+## Data Descriptions
+- `API_AG.PRD.FOOD.XD_DS2_en_csv_v2_10231267.csv`: Contains food production indicators/indexes for the world's countries. Covers most countries and most years between 1961-2016
+- `NORSFoodborneInfo.csv`: Contains data from the NORS website about foodborne outbreak, illness, hospitalization, and death rate in the United States from 1998-2016.
+- `ecoli_CDC.csv`: Contains data from the CDC website about E Coli outbreak, illness, and death rates in the United States from 1982-2016.
+- `salmonella_CDC.csv`: Contains data from the CDC website about Salmonella outbreak, illness, and death rates in the United States from 1982-2016.
+
+#### 2016 Foodborne Outbreaks Data
 - `table1_2016_FoodBorneOutbreaks.csv`: Table 1: Foodborne disease outbreaks, outbreak-associated illnesses, and hospitalizations, by etiology (confirmed or suspected) Foodborne Disease Outbreak Surveillance System, United States, 2016.
 - `table2_2016_FoodBorneOutbreaks.csv`: Table 2a: Foodborne disease outbreaks and outbreak-associated illnesses, by food category - Foodborne Disease Outbreak Surveillance System, United States, 2016.
 - `table2b_2016_FoodBorneOutbreaks.csv`: Table 2b: Most common pathogen-food category pairs resulting in outbreaks, outbreak-associated illnesses, hospitalizations, and deaths-Foodborne Disease Outbreak Surveillance System, United States, 2016.

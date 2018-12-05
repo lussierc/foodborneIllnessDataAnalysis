@@ -5,6 +5,25 @@
 ## Progress Report
 <!-- DELETE THIS BEFORE TURNING IN: Final report (6 or more pages) Deadline: Friday, 13th December, 2018 by 7pm: Incorporate any feedback from the progress report and the presentation session. Your final report should be clear, concise and, most importantly, well written, this includes no typos or grammatical errors. Your report should be written in a professional manner and should include explanation of all of the requirements outlined above. -->
 
+<!-- OUTLINE:
+Intro -- what is our project about? what are we looking at within this scope?
+
+Background information -- what are foodborne illnesses?
+
+Motivation -- why are foodborne illnesses important? 
+
+Approach -- how did we do our project?
+
+Challenges -- what challenges did we face? how did we overcome them?
+
+Results -- what did we find?
+
+Analysis -- What do our results mean?
+
+Our Policy Change -- based on our results an analysis, we think that this should happen with policies.
+
+Conclusion -->
+
 
 <!-- For challenges: Data downloaded had to be converted, original main dataset not that useful to our overall main question, could not find any useful e.coli data wanted in proposal comments.-->
 ## References
