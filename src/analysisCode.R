@@ -2,7 +2,7 @@
 # Group Members: Christian Lussier, Dillon Thoma, Nick Tocci, Ben Watto
 
 # Imports the needed libraries:
-# Run the below only if the library is not already installed.
+# Run the below only if the library is already installed.
 
 library(dplyr)
 library(tibble)
@@ -53,7 +53,10 @@ View(food_production_indicator_data)
 # ----- PLOTTING -----:
 # BY ETIOLOGY: 
 # Plots scatterplot that compares the outbreaks by confirmed etiology and suspected etiology. 
-ggplot(data = table1_2016_FoodBorneOutbreaks) + geom_point(mapping = aes(x = No..Outbreaks.CE, y = SE, color = Etiology), position = "dodge", stat = "identity") + theme(axis.text.x = element_text(angle = 90, hjust = 1, vjust=-0.01))
+ggplot(data = table1_2016_FoodBorneOutbreaks,aes(No..Outbreaks.CE, SE)) + 
+  geom_point(aes(color = Etiology), position = "dodge", stat = "identity") + 
+  geom_smooth() +
+  theme(axis.text.x = element_text(angle = 90, hjust = 1, vjust=-0.01))
 
 # Plots bar graph that shows the numbers of confirmed outbreaks by etiology.
 ggplot(data = table1_2016_FoodBorneOutbreaks) + geom_bar(mapping = aes(x = Etiology, y = No..Outbreaks.CE), position = "dodge", stat = "identity") + theme(axis.text.x = element_text(angle = 90, hjust = 1, vjust=-0.01))
@@ -69,3 +72,58 @@ ggplot(data = table2a_2016_FoodBorneOutbreaks) + geom_histogram(mapping = aes(x 
 
 # Plots bar graph that shows the numbers of illnesses by food type.
 ggplot(data = table2a_2016_FoodBorneOutbreaks) + geom_histogram(mapping = aes(x = Food.Category., y = No..Illnesses.Total), position = "dodge", stat = "identity") + theme(axis.text.x = element_text(angle = 90, hjust = 1, vjust=-0.01))
+
+#######################################################
+#### Food Production - foodProduction ####
+#######################################################
+
+# Import Data
+
+foodProduction <- read.csv("../data/usedData/foodProduction.csv")
+years <- colnames(foodProduction[,c(5:62)])
+yearData <- foodProduction %>% filter(Country.Name == "United States")
+alteredDf <- data.frame(gather(key = Year, value = Value, yearData[,5:62]))
+alteredDf$Year <- substring(alteredDf$Year, 2)
+alteredDf$Year <- sapply(alteredDf$Year, as.numeric)
+ggplot(data = alteredDf, aes(Year, Value)) + 
+  geom_point() +
+  geom_smooth() + 
+  theme(axis.text.x = element_text(angle = 90, hjust = 1, vjust=-0.01))
+
+#######################################################
+#### overall salmonella over time - salmonella_CDC ####
+#######################################################
+
+# Import Data
+salmonellaCounts <- read.csv("../data/usedData/salmonella_CDC.csv")
+# Filter by less than 5000 cases to remove outliers
+salmonellaCounts <- filter(salmonellaCounts, Cases < 5000)
+# Plot by a regression of years to cases to show increase
+ggplot(data = salmonellaCounts, aes(Year, Cases)) + 
+  geom_point() +
+  geom_smooth() + 
+  theme(axis.text.x = element_text(angle = 90, hjust = 1, vjust=-0.01))
+
+#######################################################
+#### overall illness over time - NORSFoodborneInfo ####
+#######################################################
+
+# Import Data
+overallIllnessCounts <- read.csv("../data/usedData/NORSFoodborneInfo.csv")
+# Plot by regression of years to illnesses to show current decline with a slight 
+# increase over the past 3-4 years
+ggplot(data = overallIllnessCounts, aes(Year, Illnesses)) + 
+  geom_point() +
+  geom_smooth() + 
+  theme(axis.text.x = element_text(angle = 90, hjust = 1, vjust=-0.01))
+
+####################################################################
+#### Breakdown of places - table3a_2016_FoodBorneOutbreaks_data ####
+####################################################################
+
+# Import Data
+
+# Breakdown of etiology - table1_2016_FoodBorneOutbreaks_data 2
+# Breakdowon of food category - 
+
+
