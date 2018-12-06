@@ -11,80 +11,25 @@ library(tidyverse)
 # --- Import Data From 2016 Foodborne Outbreaks --- #
 # - Import Regular Tables From 2016 Foodborne Outbreaks - #
 
-table1_2016_FoodBorneOutbreaks <- read.csv("../data/usedData/table1_2016_FoodBorneOutbreaks_data.csv")
-
-table2a_2016_FoodBorneOutbreaks <- read.csv("../data/usedData/table2_2016_FoodBorneOutbreaks_data.csv")
-View(table2a_2016_FoodBorneOutbreaks) # Shows the data for the object
-
-table2b_2016_FoodBorneOutbreaks <- read.csv("../data/usedData/table2b_2016_FoodBorneOutbreaks_data.csv")
-
-table3a_2016_FoodBorneOutbreaks <- read.csv("../data/usedData/table3a_2016_FoodBorneOutbreaks_data.csv")
-
-table3b_2016_FoodBorneOutbreaks <- read.csv("../data/usedData/table3b_2016_FoodBorneOutbreaks_data.csv")
-
-table3c_2016_FoodBorneOutbreaks <- read.csv("../data/usedData/table3c_2016_FoodBorneOutbreaks_data.csv")
-
-table4_2016_FoodBorneOutbreaks <- read.csv("../data/usedData/table4_2016_FoodBorneOutbreaks_data.csv")
-
-# - Import Appendix Tables From 2016 Foodborne Outbreaks - #
-appTable1_2016_FoodBorneOutbreaks_data <- read.csv("../data/usedData/appTable1_2016_FoodBorneOutbreaks_data.csv", header=FALSE)
-
-appTable2_2016_FoodBorneOutbreaks_data <- read.csv("../data/usedData/appTable2_2016_FoodBorneOutbreaks_data.csv", header=FALSE)
-
-appTable3_2016_FoodBorneOutbreaks_data <- read.csv("../data/usedData/appTable3_2016_FoodBorneOutbreaks_data.csv", header=FALSE)
-
-appTable4_2016_FoodBorneOutbreaks_data <- read.csv("../data/usedData/appTable4_2016_FoodBorneOutbreaks_data.csv", header=FALSE)
-
-appTable5_2016_FoodBorneOutbreaks_data <- read.csv("../data/usedData/appTable5_2016_FoodBorneOutbreaks_data.csv", header=FALSE)
-
-appTable6_2016_FoodBorneOutbreaks_data <- read.csv("../data/usedData/appTable6_2016_FoodBorneOutbreaks_data.csv", header=FALSE)
-
-
-NORS_foodborne <- read.csv("../data/usedData/NORSFoodborneInfo.csv", header=TRUE)
-View(NORS_foodborne)
-
-food_production_indicator_data <- read.csv("../data/usedData/API_AG.PRD.FOOD.XD_DS2_en_csv_v2_10231267.csv", header=TRUE)
-View(food_production_indicator_data)
-
-
-# --- End Data Imports --- #
-
-
-# ----- PLOTTING -----:
-# BY ETIOLOGY: 
-# Plots scatterplot that compares the outbreaks by confirmed etiology and suspected etiology. 
-ggplot(data = table1_2016_FoodBorneOutbreaks,aes(No..Outbreaks.CE, SE)) + 
-  geom_point(aes(color = Etiology), position = "dodge", stat = "identity") + 
-  geom_smooth() +
-  theme(axis.text.x = element_text(angle = 90, hjust = 1, vjust=-0.01))
-
-# Plots bar graph that shows the numbers of confirmed outbreaks by etiology.
-ggplot(data = table1_2016_FoodBorneOutbreaks) + geom_bar(mapping = aes(x = Etiology, y = No..Outbreaks.CE), position = "dodge", stat = "identity") + theme(axis.text.x = element_text(angle = 90, hjust = 1, vjust=-0.01))
-
-# Plots bar graph that shows the numbers of confirmed illnesses by etiology.
-ggplot(data = table1_2016_FoodBorneOutbreaks) + geom_bar(mapping = aes(x = Etiology, y = No..Illnesses.CE), position = "dodge", stat = "identity") + theme(axis.text.x = element_text(angle = 90, hjust = 1, vjust=-0.01))
-
-# Plots bar graph that shows the numbers of confirmed hospitalizations by etiology.
-ggplot(data = table1_2016_FoodBorneOutbreaks) + geom_bar(mapping = aes(x = Etiology, y = No..Hospitalizations.CE), position = "dodge", stat = "identity") + theme(axis.text.x = element_text(angle = 90, hjust = 1, vjust=-0.01))
-
-# Plots bar graph that shows the numbers of outbreaks by food type.
-ggplot(data = table2a_2016_FoodBorneOutbreaks) + geom_histogram(mapping = aes(x = Food.Category., y = No..Outbreaks.Total), position = "dodge", stat = "identity") + theme(axis.text.x = element_text(angle = 90, hjust = 1, vjust=-0.01))
-
-# Plots bar graph that shows the numbers of illnesses by food type.
-ggplot(data = table2a_2016_FoodBorneOutbreaks) + geom_histogram(mapping = aes(x = Food.Category., y = No..Illnesses.Total), position = "dodge", stat = "identity") + theme(axis.text.x = element_text(angle = 90, hjust = 1, vjust=-0.01))
-
 #######################################################
 #### Food Production - foodProduction ####
 #######################################################
 
-# Import Data
-
+## Import Data
 foodProduction <- read.csv("../data/usedData/foodProduction.csv")
-years <- colnames(foodProduction[,c(5:62)])
+
+## filter by United States as that is the country we are observing
 yearData <- foodProduction %>% filter(Country.Name == "United States")
+
+## Create dataframe of years and their values
 alteredDf <- data.frame(gather(key = Year, value = Value, yearData[,5:62]))
+
+## Changing the years column from a character string to a number 
+## and removing the first x
 alteredDf$Year <- substring(alteredDf$Year, 2)
 alteredDf$Year <- sapply(alteredDf$Year, as.numeric)
+
+## Plotting a linear regression of dependent values, independent years
 ggplot(data = alteredDf, aes(Year, Value)) + 
   geom_point() +
   geom_smooth() + 
@@ -94,11 +39,13 @@ ggplot(data = alteredDf, aes(Year, Value)) +
 #### overall salmonella over time - salmonella_CDC ####
 #######################################################
 
-# Import Data
+## Import Data
 salmonellaCounts <- read.csv("../data/usedData/salmonella_CDC.csv")
-# Filter by less than 5000 cases to remove outliers
+
+## Filter by less than 5000 cases to remove outliers
 salmonellaCounts <- filter(salmonellaCounts, Cases < 5000)
-# Plot by a regression of years to cases to show increase
+
+## Plot by a regression of years to cases to show increase
 ggplot(data = salmonellaCounts, aes(Year, Cases)) + 
   geom_point() +
   geom_smooth() + 
@@ -108,10 +55,11 @@ ggplot(data = salmonellaCounts, aes(Year, Cases)) +
 #### overall illness over time - NORSFoodborneInfo ####
 #######################################################
 
-# Import Data
+## Import Data
 overallIllnessCounts <- read.csv("../data/usedData/NORSFoodborneInfo.csv")
-# Plot by regression of years to illnesses to show current decline with a slight 
-# increase over the past 3-4 years
+
+## Plot by regression of years to illnesses to show current decline with a slight 
+## increase over the past 3-4 years
 ggplot(data = overallIllnessCounts, aes(Year, Illnesses)) + 
   geom_point() +
   geom_smooth() + 
@@ -121,7 +69,7 @@ ggplot(data = overallIllnessCounts, aes(Year, Illnesses)) +
 #### Breakdown of places - table3a_2016_FoodBorneOutbreaks_data ####
 ####################################################################
 
-# Import Data
+## Import Data
 restaurantData <- read.csv("../data/usedData/table3a_2016_FoodBorneOutbreaks_data.csv")
 categoryData <- restaurantData[c(1,7,8,9,15,16,21,23), c(1,5)]
 bp<- ggplot(categoryData, aes(x="", y=No..Illnesses.., fill=Location)) +
@@ -133,11 +81,67 @@ plot(pie)
 #### Breakdown of etiology - table1_2016_FoodBorneOutbreaks_data####
 #######################################################################
 
-# Import Data
-foodData <- read.csv("../data/usedData/table3a_2016_FoodBorneOutbreaks_data.csv")
+## Import Data
+etiologyData <- read.csv("../data/usedData/table1_2016_FoodBorneOutbreaks_data.csv")
+
+## Create the data holding frame
+etiologyTotals <- data.frame(Type = as.character(), Total = as.numeric())
+# column 8 is the illness confirmed + suspected for the category number
+
+# row 1 name for bacterial
+# row 19 subtotal for bacterial
+
+bacterialRow <- data.frame(Type = etiologyData[1,1], Total = etiologyData[19,8])
+etiologyTotals <- rbind(etiologyTotals, bacterialRow)
+
+# row 20 name for chemical and toxin
+# row 25 subtotal for chemical and toxin
+
+chemicalRow <- data.frame(Type = etiologyData[20,1], Total = etiologyData[25,8])
+etiologyTotals <- rbind(etiologyTotals, chemicalRow)
+
+# row 26 name for parasitic
+# row 30 subtotal for parasitic
+
+parasiticRow <- data.frame(Type = etiologyData[26,1], Total = etiologyData[30,8])
+etiologyTotals <- rbind(etiologyTotals, parasiticRow)
+
+# row 31 name for viral
+# row 36 subtotal for viral
+
+viralRow <- data.frame(Type = etiologyData[32,1], Total = etiologyData[36,8])
+etiologyTotals <- rbind(etiologyTotals, viralRow)
+
+## plot of a histogram for all of these
+
+ggplot(data = etiologyTotals, aes(x = Type, y = Total, fill = Type)) +
+  geom_bar(position = "dodge", stat = "identity") + 
+  theme(axis.text.x = element_text(angle = 90, hjust = 1, vjust=-0.01))
 
 ###########################################################################
 #### Breakdowon of food category - table2_2016_FoodBorneOutbreaks_data ####
 ###########################################################################
+
+## Import Data
+foodData <- read.csv("../data/usedData/table2_2016_FoodBorneOutbreaks_data.csv")
+
+## Creating storage data frame
+foodTotals <- data.frame(Type = as.character(), Total = as.numeric())
+
+aquaticAnimalsTotal <-data.frame(Type = foodData[1,1], Total = foodData[19,8])
+etiologyTotals <- rbind(etiologyTotals, bacterialRow)
+##############################
+#### Food Sales over years####
+##############################
+
 # Import Data
-foodData <- read.csv("../data/usedData/table3a_2016_FoodBorneOutbreaks_data.csv")
+foodSales <- read.csv("../data/usedData/foodSales.csv")
+ggplot(data = foodSales, aes(Years, Sales)) + 
+  geom_point() +
+  geom_smooth() + 
+  theme(axis.text.x = element_text(angle = 90, hjust = 1, vjust=-0.01))
+
+
+
+
+
