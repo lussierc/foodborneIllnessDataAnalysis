@@ -10,7 +10,9 @@ Intro -- what is our project about? what are we looking at within this scope?
 
 Background information -- what are foodborne illnesses?
 
-Motivation -- why are foodborne illnesses important? 
+Motivation -- why are foodborne illnesses important?
+
+What questions does our project aim to answer?
 
 Approach -- how did we do our project?
 
@@ -22,8 +24,11 @@ Analysis -- What do our results mean?
 
 Our Policy Change -- based on our results an analysis, we think that this should happen with policies.
 
-Conclusion -->
+Conclusion
+-->
 
+
+Despite advances in food production and healthcare, foodborne illnesses are still widespread and have severe effects even in developed countries like the United States, making them an important topic of discussion in today's society. Foodborne illnesses 
 
 <!-- For challenges: Data downloaded had to be converted, original main dataset not that useful to our overall main question, could not find any useful e.coli data wanted in proposal comments.-->
 ## References
