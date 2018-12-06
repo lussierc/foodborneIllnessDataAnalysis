@@ -122,8 +122,22 @@ ggplot(data = overallIllnessCounts, aes(Year, Illnesses)) +
 ####################################################################
 
 # Import Data
+restaurantData <- read.csv("../data/usedData/table3a_2016_FoodBorneOutbreaks_data.csv")
+categoryData <- restaurantData[c(1,7,8,9,15,16,21,23), c(1,5)]
+bp<- ggplot(categoryData, aes(x="", y=No..Illnesses.., fill=Location)) +
+  geom_bar(width = 1, stat = "identity")
+pie <- bp + coord_polar("y", start=0)
+plot(pie)
 
-# Breakdown of etiology - table1_2016_FoodBorneOutbreaks_data 2
-# Breakdowon of food category - 
+#######################################################################
+#### Breakdown of etiology - table1_2016_FoodBorneOutbreaks_data####
+#######################################################################
 
+# Import Data
+foodData <- read.csv("../data/usedData/table3a_2016_FoodBorneOutbreaks_data.csv")
 
+###########################################################################
+#### Breakdowon of food category - table2_2016_FoodBorneOutbreaks_data ####
+###########################################################################
+# Import Data
+foodData <- read.csv("../data/usedData/table3a_2016_FoodBorneOutbreaks_data.csv")
