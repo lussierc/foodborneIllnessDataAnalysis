@@ -48,10 +48,10 @@ ggplot(data = salmonellaCounts, aes(Year, Cases)) +
   geom_point() +
   geom_smooth() + 
   theme(axis.text.x = element_text(angle = 90, hjust = 1, vjust=-0.01)) +
-  ggtitle("Salmonella Increase")
+  ggtitle("Salmonella Cases United States (Increase)")
 
 #######################################################
-#### overall illness over time - NORSFoodborneInfo ####
+#### overall foodborne illness over time - NORSFoodborneInfo ####
 #######################################################
 
 ## Import Data
@@ -63,7 +63,7 @@ ggplot(data = overallIllnessCounts, aes(Year, Illnesses)) +
   geom_point() +
   geom_smooth() + 
   theme(axis.text.x = element_text(angle = 90, hjust = 1, vjust=-0.01)) +
-  ggtitle("Number of illnesses (United States)")
+  ggtitle("Number of foodborne illnesses (United States)")
 
 ####################################################################
 #### Breakdown of places - table3a_2016_FoodBorneOutbreaks_data ####
