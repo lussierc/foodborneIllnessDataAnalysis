@@ -8,9 +8,6 @@ library(dplyr)
 library(tibble)
 library(tidyverse)
 
-# --- Import Data From 2016 Foodborne Outbreaks --- #
-# - Import Regular Tables From 2016 Foodborne Outbreaks - #
-
 #######################################################
 #### Food Production - foodProduction ####
 #######################################################
@@ -33,7 +30,8 @@ alteredDf$Year <- sapply(alteredDf$Year, as.numeric)
 ggplot(data = alteredDf, aes(Year, Value)) + 
   geom_point() +
   geom_smooth() + 
-  theme(axis.text.x = element_text(angle = 90, hjust = 1, vjust=-0.01))
+  theme(axis.text.x = element_text(angle = 90, hjust = 1, vjust=-0.01)) +
+  ggtitle("United States Food Production")
 
 #######################################################
 #### overall salmonella over time - salmonella_CDC ####
@@ -49,7 +47,8 @@ salmonellaCounts <- filter(salmonellaCounts, Cases < 5000)
 ggplot(data = salmonellaCounts, aes(Year, Cases)) + 
   geom_point() +
   geom_smooth() + 
-  theme(axis.text.x = element_text(angle = 90, hjust = 1, vjust=-0.01))
+  theme(axis.text.x = element_text(angle = 90, hjust = 1, vjust=-0.01)) +
+  ggtitle("Salmonella Increase")
 
 #######################################################
 #### overall illness over time - NORSFoodborneInfo ####
@@ -63,7 +62,8 @@ overallIllnessCounts <- read.csv("../data/usedData/NORSFoodborneInfo.csv")
 ggplot(data = overallIllnessCounts, aes(Year, Illnesses)) + 
   geom_point() +
   geom_smooth() + 
-  theme(axis.text.x = element_text(angle = 90, hjust = 1, vjust=-0.01))
+  theme(axis.text.x = element_text(angle = 90, hjust = 1, vjust=-0.01)) +
+  ggtitle("Number of illnesses (United States)")
 
 ####################################################################
 #### Breakdown of places - table3a_2016_FoodBorneOutbreaks_data ####
@@ -73,7 +73,8 @@ ggplot(data = overallIllnessCounts, aes(Year, Illnesses)) +
 restaurantData <- read.csv("../data/usedData/table3a_2016_FoodBorneOutbreaks_data.csv")
 categoryData <- restaurantData[c(1,7,8,9,15,16,21,23), c(1,5)]
 bp<- ggplot(categoryData, aes(x="", y=No..Illnesses.., fill=Location)) +
-  geom_bar(width = 1, stat = "identity")
+  geom_bar(width = 1, stat = "identity") +
+  ggtitle("Locations of Foodbourne Illnesses")
 pie <- bp + coord_polar("y", start=0)
 plot(pie)
 
@@ -116,7 +117,8 @@ etiologyTotals <- rbind(etiologyTotals, viralRow)
 
 ggplot(data = etiologyTotals, aes(x = Type, y = Total, fill = Type)) +
   geom_bar(position = "dodge", stat = "identity") + 
-  theme(axis.text.x = element_text(angle = 90, hjust = 1, vjust=-0.01))
+  theme(axis.text.x = element_text(angle = 90, hjust = 1, vjust=-0.01)) +
+  ggtitle("Types of foodbourne illnesses")
 
 ###########################################################################
 #### Breakdowon of food category - table2_2016_FoodBorneOutbreaks_data ####
@@ -128,20 +130,60 @@ foodData <- read.csv("../data/usedData/table2_2016_FoodBorneOutbreaks_data.csv")
 ## Creating storage data frame
 foodTotals <- data.frame(Type = as.character(), Total = as.numeric())
 
-aquaticAnimalsTotal <-data.frame(Type = foodData[1,1], Total = foodData[19,8])
-etiologyTotals <- rbind(etiologyTotals, bacterialRow)
-##############################
-#### Food Sales over years####
-##############################
+# Columns: name = 1, data = 4
+# aquatic name = 1, data = 6
+aquaticAnimalsRow <-data.frame(Type = foodData[1,1], Total = foodData[6,4])
+foodTotals <- rbind(foodTotals, aquaticAnimalsRow)
+
+# landanimals name = 7, data = 16
+landAnimalsRow <-data.frame(Type = foodData[7,1], Total = foodData[16,4])
+foodTotals <- rbind(foodTotals, landAnimalsRow)
+
+# plants name = 17, data = 28
+plantsRow <-data.frame(Type = foodData[17,1], Total = foodData[28,4])
+foodTotals <- rbind(foodTotals, plantsRow)
+
+ggplot(data = foodTotals, aes(x = Type, y = Total, fill = Type)) +
+  geom_bar(position = "dodge", stat = "identity") + 
+  theme(axis.text.x = element_text(angle = 90, hjust = 1, vjust=-0.01)) +
+  ggtitle("Food Type Causes for Illnesses")
+
+###############################
+#### Food Sales over years ####
+###############################
 
 # Import Data
 foodSales <- read.csv("../data/usedData/foodSales.csv")
 ggplot(data = foodSales, aes(Years, Sales)) + 
   geom_point() +
   geom_smooth() + 
-  theme(axis.text.x = element_text(angle = 90, hjust = 1, vjust=-0.01))
+  theme(axis.text.x = element_text(angle = 90, hjust = 1, vjust=-0.01)) +
+  ggtitle("Retail Food and Beverage Sales")
 
+###############################
+#### Health Code Violations ####
+###############################
 
+###########################################################################
+#*************************************************************************#
 
+# WARNING: THE FOLLOWING CODE WILL TAKE SOME TIM TO COMPLETE AND THE PLOT
+# WINDOW WILL NEED TO BE RESIZED TO SEE THE FULL PLOT
 
+#*************************************************************************#
+###########################################################################
 
+# Import Data
+
+foodViolations <- read.csv("../data/usedData/inspectionResults.csv")
+foodViolations$INSPECTION.DATE <- sapply(foodViolations$INSPECTION.DATE, as.character)
+foodViolations <- filter(foodViolations, endsWith(INSPECTION.DATE,"2018"))
+foodViolations <- filter(foodViolations, CRITICAL.FLAG == "Critical")
+freqs <- as.data.frame(table(foodViolations$VIOLATION.CODE))
+freqs <- freqs[-1,]
+freqs <- filter(freqs, Freq >20)
+
+ggplot(data = freqs, aes(x = Var1, y = Freq, fill = Var1)) +
+  geom_bar(position = "dodge", stat = "identity") + 
+  theme(axis.text.x = element_text(angle = 90, hjust = 1, vjust=-0.01)) +
+  ggtitle("Number of Food Violations in 2018 (New York City)")
