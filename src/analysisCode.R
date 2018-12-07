@@ -19,7 +19,7 @@ foodProduction <- read.csv("../data/usedData/foodProduction.csv")
 yearData <- foodProduction %>% filter(Country.Name == "United States")
 
 ## Create dataframe of years and their values
-alteredDf <- data.frame(gather(key = Year, value = Value, yearData[,5:62]))
+alteredDf <- data.frame(gather(key = Year, value = Index, yearData[,5:62]))
 
 ## Changing the years column from a character string to a number 
 ## and removing the first x
@@ -27,7 +27,7 @@ alteredDf$Year <- substring(alteredDf$Year, 2)
 alteredDf$Year <- sapply(alteredDf$Year, as.numeric)
 
 ## Plotting a linear regression of dependent values, independent years
-ggplot(data = alteredDf, aes(Year, Value)) + 
+ggplot(data = alteredDf, aes(Year, Index)) + 
   geom_point() +
   geom_smooth() + 
   theme(axis.text.x = element_text(angle = 90, hjust = 1, vjust=-0.01)) +
@@ -158,7 +158,7 @@ ggplot(data = foodSales, aes(Years, Sales)) +
   geom_point() +
   geom_smooth() + 
   theme(axis.text.x = element_text(angle = 90, hjust = 1, vjust=-0.01)) +
-  ggtitle("Retail Food and Beverage Sales")
+  ggtitle("Retail Food and Beverage Sales (Billions)")
 
 ###############################
 #### Health Code Violations ####
