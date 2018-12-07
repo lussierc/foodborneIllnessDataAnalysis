@@ -12,6 +12,8 @@ library(tidyverse)
 #### Food Production - foodProduction ####
 #######################################################
 
+# MORE AND MORE DEMAND FOR SALES, BACKED UP BY THE RETAIL SALES
+
 ## Import Data
 foodProduction <- read.csv("../data/usedData/foodProduction.csv")
 
