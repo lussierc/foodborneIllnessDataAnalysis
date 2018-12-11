@@ -36,7 +36,6 @@ ggplot(data = alteredDf, aes(Year, Index)) +
   theme(axis.text.x = element_text(angle = 90, hjust = 1, vjust=-0.01)) +
   ggtitle("United States Food Production")
 alteredDf <- na.omit(alteredDf)
-attach(alteredDf)
 cor(alteredDf$Index, alteredDf$Year)
 pairs.panels(alteredDf[c(1,2)])
 #######################################################
@@ -56,6 +55,10 @@ ggplot(data = salmonellaCounts, aes(Year, Cases)) +
   theme(axis.text.x = element_text(angle = 90, hjust = 1, vjust=-0.01)) +
   ggtitle("Salmonella Cases United States (Increase)")
 
+salmonellaCounts <- na.omit(salmonellaCounts)
+salmonellaCounts$Cases <- as.numeric(salmonellaCounts$Cases)
+cor(salmonellaCounts$Cases, salmonellaCounts$Year)
+pairs.panels(salmonellaCounts[c(1,2)])
 
 #######################################################
 #### overall foodborne illness over time - NORSFoodborneInfo ####
@@ -72,6 +75,10 @@ ggplot(data = overallIllnessCounts, aes(Year, Illnesses)) +
   theme(axis.text.x = element_text(angle = 90, hjust = 1, vjust=-0.01)) +
   ggtitle("Number of foodborne illnesses (United States)")
 
+overallIllnessCounts <- na.omit(overallIllnessCounts)
+overallIllnessCounts$Illnesses <- as.numeric(overallIllnessCounts$Illnesses)
+cor(overallIllnessCounts$Illnesses, overallIllnessCounts$Year)
+pairs.panels(overallIllnessCounts[c(1,2)])
 ####################################################################
 #### Breakdown of places - table3a_2016_FoodBorneOutbreaks_data ####
 ####################################################################
@@ -161,12 +168,17 @@ ggplot(data = foodTotals, aes(x = Type, y = Total, fill = Type)) +
 
 # Import Data
 foodSales <- read.csv("../data/usedData/foodSales.csv")
+
 ggplot(data = foodSales, aes(Years, Sales)) + 
   geom_point() +
   geom_smooth() + 
   theme(axis.text.x = element_text(angle = 90, hjust = 1, vjust=-0.01)) +
   ggtitle("Retail Food and Beverage Sales (Billions)")
 
+foodSales <- na.omit(foodSales)
+foodSales$Sales <- as.numeric(foodSales$Sales)
+cor(foodSales$Sales, foodSales$Years)
+pairs.panels(foodSales[c(1,2)])
 ###############################
 #### Health Code Violations ####
 ###############################
