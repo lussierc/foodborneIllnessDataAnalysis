@@ -7,6 +7,7 @@
 library(dplyr)
 library(tibble)
 library(tidyverse)
+library(psych)
 
 #######################################################
 #### Food Production - foodProduction ####
@@ -34,7 +35,10 @@ ggplot(data = alteredDf, aes(Year, Index)) +
   geom_smooth() + 
   theme(axis.text.x = element_text(angle = 90, hjust = 1, vjust=-0.01)) +
   ggtitle("United States Food Production")
-
+alteredDf <- na.omit(alteredDf)
+attach(alteredDf)
+cor(alteredDf$Index, alteredDf$Year)
+pairs.panels(alteredDf[c(1,2)])
 #######################################################
 #### overall salmonella over time - salmonella_CDC ####
 #######################################################
@@ -51,6 +55,7 @@ ggplot(data = salmonellaCounts, aes(Year, Cases)) +
   geom_smooth() + 
   theme(axis.text.x = element_text(angle = 90, hjust = 1, vjust=-0.01)) +
   ggtitle("Salmonella Cases United States (Increase)")
+
 
 #######################################################
 #### overall foodborne illness over time - NORSFoodborneInfo ####
