@@ -38,6 +38,8 @@ ggplot(data = alteredDf, aes(Year, Index)) +
 alteredDf <- na.omit(alteredDf)
 cor(alteredDf$Index, alteredDf$Year)
 pairs.panels(alteredDf[c(1,2)])
+t.test(alteredDf$Index, alteredDf$Year)
+summary(lm(alteredDf$Index ~ alteredDf$Year))
 #######################################################
 #### overall salmonella over time - salmonella_CDC ####
 #######################################################
@@ -59,7 +61,8 @@ salmonellaCounts <- na.omit(salmonellaCounts)
 salmonellaCounts$Cases <- as.numeric(salmonellaCounts$Cases)
 cor(salmonellaCounts$Cases, salmonellaCounts$Year)
 pairs.panels(salmonellaCounts[c(1,2)])
-
+t.test(salmonellaCounts$Cases, salmonellaCounts$Year)
+summary(lm(salmonellaCounts$Cases ~ salmonellaCounts$Year))
 #######################################################
 #### overall foodborne illness over time - NORSFoodborneInfo ####
 #######################################################
@@ -79,6 +82,8 @@ overallIllnessCounts <- na.omit(overallIllnessCounts)
 overallIllnessCounts$Illnesses <- as.numeric(overallIllnessCounts$Illnesses)
 cor(overallIllnessCounts$Illnesses, overallIllnessCounts$Year)
 pairs.panels(overallIllnessCounts[c(1,2)])
+t.test(overallIllnessCounts$Illnesses, overallIllnessCounts$Year)
+summary(lm(overallIllnessCounts$Illnesses ~ overallIllnessCounts$Year))
 ####################################################################
 #### Breakdown of places - table3a_2016_FoodBorneOutbreaks_data ####
 ####################################################################
@@ -179,6 +184,8 @@ foodSales <- na.omit(foodSales)
 foodSales$Sales <- as.numeric(foodSales$Sales)
 cor(foodSales$Sales, foodSales$Years)
 pairs.panels(foodSales[c(1,2)])
+t.test(foodSales$Sales, foodSales$Years)
+summary(lm(foodSales$Sales ~ foodSales$Years))
 ###############################
 #### Health Code Violations ####
 ###############################
