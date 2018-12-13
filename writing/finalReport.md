@@ -38,7 +38,7 @@ We wanted to see what the breakdown of the types of foodborne illnesses is. This
 
 As indicated in the past portion of the analysis, we believed that restaurants were a very large part of the issue. This is supported by the breakdown of the locations that foodborne illnesses occur. Restaraunts are very clearly the largest percentage of where the problem lies, with another food distribution location, catering or banquet facility, being the second choice. This shows that it is not associated with the collection of food, such as at a farm.
 
-![Number of Food Violations in 2018 (New York City)](images/foodviolations.png)
+![Number of Food Violations in 2018 (New York City)](images/foodViolations.png)
 
 This is further supported with the number of food violations and what they are based around. We used data from New York City that had explanations on inspection information from the different restaurants. We further trimmed the data down from all cases to just cases that occurred in 2018 and were critical. The number of issues were still astronomical. The number of issues labeled 04L (mice found in food production areas or food storage) was over 9000 cases. The next section of the bars that we looked to concerned 06D (Food contact surface not properly washed, rinsed and sanitized after each use and following any activity when contamination may have occurred). The number also reached over 9000 instances. The final big section that we looked to was 02G (Cold food item held above 41 F (smoked fish and reduced oxygen packaged foods above 38 F) except during necessary preparation.). This was very important information as it showed that land animal foods were being misheld by food preparers, which were the highest cause of foodborne illnesses.
 
