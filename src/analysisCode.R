@@ -1,8 +1,8 @@
-## CS301 - Final Project Code
+## CS301 - Final Project Fall 2018 Code
 # Group Members: Christian Lussier, Dillon Thoma, Nick Tocci, Ben Watto
 
 # Imports the needed libraries:
-# Run the below only if the library is already installed.
+# Run the code below only if the library is already installed.
 
 library(dplyr)
 library(tibble)
@@ -40,6 +40,8 @@ cor(alteredDf$Index, alteredDf$Year)
 pairs.panels(alteredDf[c(1,2)])
 t.test(alteredDf$Index, alteredDf$Year)
 summary(lm(alteredDf$Index ~ alteredDf$Year))
+
+
 #######################################################
 #### overall salmonella over time - salmonella_CDC ####
 #######################################################
@@ -63,6 +65,8 @@ cor(salmonellaCounts$Cases, salmonellaCounts$Year)
 pairs.panels(salmonellaCounts[c(1,2)])
 t.test(salmonellaCounts$Cases, salmonellaCounts$Year)
 summary(lm(salmonellaCounts$Cases ~ salmonellaCounts$Year))
+
+
 #######################################################
 #### overall foodborne illness over time - NORSFoodborneInfo ####
 #######################################################
@@ -84,6 +88,8 @@ cor(overallIllnessCounts$Illnesses, overallIllnessCounts$Year)
 pairs.panels(overallIllnessCounts[c(1,2)])
 t.test(overallIllnessCounts$Illnesses, overallIllnessCounts$Year)
 summary(lm(overallIllnessCounts$Illnesses ~ overallIllnessCounts$Year))
+
+
 ####################################################################
 #### Breakdown of places - table3a_2016_FoodBorneOutbreaks_data ####
 ####################################################################
@@ -96,6 +102,7 @@ bp<- ggplot(categoryData, aes(x="", y=No..Illnesses.., fill=Location)) +
   ggtitle("Locations of Foodbourne Illnesses")
 pie <- bp + coord_polar("y", start=0)
 plot(pie)
+
 
 #######################################################################
 #### Breakdown of etiology - table1_2016_FoodBorneOutbreaks_data####
@@ -139,6 +146,7 @@ ggplot(data = etiologyTotals, aes(x = Type, y = Total, fill = Type)) +
   theme(axis.text.x = element_text(angle = 90, hjust = 1, vjust=-0.01)) +
   ggtitle("Types of foodbourne illnesses")
 
+
 ###########################################################################
 #### Breakdowon of food category - table2_2016_FoodBorneOutbreaks_data ####
 ###########################################################################
@@ -167,6 +175,7 @@ ggplot(data = foodTotals, aes(x = Type, y = Total, fill = Type)) +
   theme(axis.text.x = element_text(angle = 90, hjust = 1, vjust=-0.01)) +
   ggtitle("Food Type Causes for Illnesses")
 
+
 ###############################
 #### Food Sales over years ####
 ###############################
@@ -186,6 +195,8 @@ cor(foodSales$Sales, foodSales$Years)
 pairs.panels(foodSales[c(1,2)])
 t.test(foodSales$Sales, foodSales$Years)
 summary(lm(foodSales$Sales ~ foodSales$Years))
+
+
 ###############################
 #### Health Code Violations ####
 ###############################
@@ -193,7 +204,7 @@ summary(lm(foodSales$Sales ~ foodSales$Years))
 ###########################################################################
 #*************************************************************************#
 
-# WARNING: THE FOLLOWING CODE WILL TAKE SOME TIM TO COMPLETE AND THE PLOT
+# WARNING: THE FOLLOWING CODE WILL TAKE SOME TIME TO COMPLETE AND THE PLOT
 # WINDOW WILL NEED TO BE RESIZED TO SEE THE FULL PLOT
 
 #*************************************************************************#
