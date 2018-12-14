@@ -1,5 +1,5 @@
 # README for File Organization
-This README contains information about the file structure and files in the project repository. 
+This README contains information about the file structure and files in the project repository.
 ## Writing Folder
 - `proposal.md`: The writing for the project proposal.
 - `progressReport.md`: The writing for the project's progress report.
@@ -8,7 +8,6 @@ This README contains information about the file structure and files in the proje
 ## `src` Folder
  - `analysisCode.R`: the file that contains the code used to gather results & analysis for the project
 ## Data Folder
-### Data Descriptions
 - `API_AG.PRD.FOOD.XD_DS2_en_csv_v2_10231267.csv`: Contains food production indicators/indexes for the world's countries. Covers most countries and most years between 1961-2016
 - `NORSFoodborneInfo.csv`: Contains data from the NORS website about foodborne outbreak, illness, hospitalization, and death rate in the United States from 1998-2016.
 - `ecoli_CDC.csv`: Contains data from the CDC website about E Coli outbreak, illness, and death rates in the United States from 1982-2016.
