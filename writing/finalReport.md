@@ -92,3 +92,4 @@ Thomas, M. Kate, et al. "Estimates of the burden of foodborne illness in Canada 
 - NORS National Foodborne Illness/Outbreak/Hospitalizations/Deaths in the US Data (1992-2017): https://wwwn.cdc.gov/norsdashboard/
 - Annual Reports Foodborne Data in the US Data: https://www.cdc.gov/fdoss/annual-reports/index.html
   - Salmonella data, E. Coli data, foodborne illness/outbreak data from restaurants, and more were found from a variety of datasets located on this webpage.
+- New York Food Violation Data - https://catalog.data.gov/dataset/dohmh-new-york-city-restaurant-inspection-results
