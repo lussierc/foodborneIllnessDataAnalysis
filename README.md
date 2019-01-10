@@ -1,10 +1,16 @@
 # Foodborne Illness Data Analysis
+A data analysis of foodborne illnesses in the United States.
+
+## Contributors
+Thanks to the following people who contributed to this project.
+ - Nick Tocci ([See GitHub Profile](https://github.com/toccinAC))
+ - Christian Lussier ([See GitHub Profile](https://github.com/lussierc))
+ - Ben Watto ([See GitHub Profile](https://github.com/wattob))
+ - Dillon Thoma ([See GitHub Profile](https://github.com/thomad74))
  
 ## File Organization
 Information about the file structure and files in the project repository.
-
 ### `docs` folder
-
 #### `writing` Folder
 - `proposal.md`: The writing for the project proposal.
 - `progressReport.md`: The writing for the project's progress report.
