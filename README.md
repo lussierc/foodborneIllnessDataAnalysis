@@ -1,5 +1,18 @@
 # Foodborne Illness Data Analysis
-A data analysis of foodborne illnesses in the United States.
+A data analysis of foodborne illnesses in the United States. R Scripting methods were used to analyze online data to find tangible results that could be included in a paper.
+
+## About This Project
+This project analyzes a variety of online datasets containing information about foodborne illnesses and contains research regarding these illnesses. Quite simply, foodborne illnesses are sicknesses caused by food. RStudio was used to compile code in order to analyze this data in a way that it could be meaningful when written about.
+### Objective
+To learn more about coding with R and completing data analysis while doing learning more about the interesting topic of foodborne illnesses. Additionally, another objective was to answer a variety of research questions our group came up with.
+
+## Running The Project's Code
+There are a variety of ways to run this project's code. One is to run the R file from `src` in your command line. Another is to open this same R file in RStudio and run it via RStudio tools.
+## Results
+Project results can be found in the folder `docs`, with the major results coming inside of the file `finalReport.md`. Results included the idea that many foodborne illnesses come from restaurants and that illness from eating land animals account for the most foodborne illnesses in the United States.
+
+## Problems, Praise or Ideas?
+If you have problems, issues, or ideas for this project, please add an issue to the issue tracker. As this is project is likely done being updated, there is no guarantee that the issue will be addressed.
 
 ## Contributors
 Thanks to the following people who contributed to this project.
@@ -7,7 +20,7 @@ Thanks to the following people who contributed to this project.
  - Christian Lussier ([See GitHub Profile](https://github.com/lussierc))
  - Ben Watto ([See GitHub Profile](https://github.com/wattob))
  - Dillon Thoma ([See GitHub Profile](https://github.com/thomad74))
- 
+
 ## File Organization
 Information about the file structure and files in the project repository.
 ### `docs` folder
@@ -22,7 +35,7 @@ Information about the file structure and files in the project repository.
 
 ### `src` Folder
  - `analysisCode.R`: the file that contains the code used to gather results & analysis for the project.
- 
+
 ### `data` Folder
 - `API_AG.PRD.FOOD.XD_DS2_en_csv_v2_10231267.csv`: Contains food production indicators/indexes for the world's countries. Covers most countries and most years between 1961-2016
 - `NORSFoodborneInfo.csv`: Contains data from the NORS website about foodborne outbreak, illness, hospitalization, and death rate in the United States from 1998-2016.
